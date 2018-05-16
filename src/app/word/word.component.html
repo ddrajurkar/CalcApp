@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row"> <div class="header">
+            <h2>Word Component</h2>        
+    </div> 
+</div>
+     <div class="row">
+         <div class="col-12">
+        <input #query (keyup.enter)="search(query.value)" type="text">
+        <div>
+                <ul>
+                    <li *ngFor="let item of words">
+                        {{item.word}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
