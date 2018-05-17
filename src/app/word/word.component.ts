@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WordsearchService } from '../wordsearch.service'
+import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-word',
@@ -10,10 +12,12 @@ export class WordComponent implements OnInit {
   words:any
   constructor(private service : WordsearchService) { }
 
-  search(term){
-   this.words= this.service.Search_Word(term)
-    }
+ 
     ngOnInit(){}
+
+    search(term){
+      this.service.callAPi(term).subscribe(res => {this.words = res});
+        }
 }
 
 
