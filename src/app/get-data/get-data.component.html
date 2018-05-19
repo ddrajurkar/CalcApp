@@ -1,0 +1,20 @@
+<div class="contaiiner">
+  <div class="row">
+    <div class="col-md-12"><div class="col-md-6">
+    <p>
+      Get 10 Synonyms for word 'Hello!'
+    </p>
+  </div>
+  <div class="row">
+      <div class="col-md-6">
+     <input #query (keyup.enter)="searchSyn(query.value)" type="text">
+     <div>
+             <ul>
+                 <li *ngFor="let item of synonyms">
+                     {{item.synonym}}
+                 </li>
+             </ul>
+         </div>
+     </div>
+
+</div>

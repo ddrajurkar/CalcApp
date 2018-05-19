@@ -6,20 +6,23 @@ import { CalcComponentComponent } from './calc-component/calc-component.componen
 import { FormsModule } from '@angular/forms';
 import { WordComponent } from './word/word.component';
 import { HttpModule } from '@angular/http';
-import {WordsearchService} from './wordsearch.service'
+import {WordsearchService} from './wordsearch.service';
+import { GetDataComponent } from './get-data/get-data.component';
+import { GetdataService } from './get-data/getdata.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalcComponentComponent,
-    WordComponent
+    WordComponent,
+    GetDataComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [WordsearchService],
+  providers: [WordsearchService,GetdataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
