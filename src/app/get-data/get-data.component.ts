@@ -14,8 +14,9 @@ export class GetDataComponent implements OnInit {
  public term : string
   constructor(private gdService : GetdataService) { 
     //this.gdService.getData('Hello').subscribe(response => {console.log('Response is : ',response)},error => {console.log('Something went wrong',error)}) 
+    
   }
-  searchSyn();
+
   searchSyn(){
     this.gdService.getData(this.term).subscribe(result => {this.synonyms = result})
     //this.gdService.getData('hello').subscribe(result => {this.synonyms = result});

@@ -11,18 +11,24 @@ import {WordsearchService} from './wordsearch.service';
 import { GetDataComponent } from './get-data/get-data.component';
 import { GetdataService } from './get-data/getdata.service';
 import { ROUTING } from './app.routing';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalcComponentComponent,
     WordComponent,
-    GetDataComponent
+    GetDataComponent,
+    HomeComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     ROUTING
   ],
   providers: [WordsearchService,GetdataService],
