@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CalcComponentComponent } from './calc-component/calc-component.component'
-import { FormsModule } from '@angular/forms';
+import {FormsModule } from '@angular/forms';
 import { WordComponent } from './word/word.component';
 import { HttpModule } from '@angular/http';
 import {WordsearchService} from './wordsearch.service';
@@ -14,6 +14,7 @@ import { ROUTING } from './app.routing';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     WordComponent,
     GetDataComponent,
     HomeComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

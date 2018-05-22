@@ -1,0 +1,49 @@
+<div class="row custom-row">
+<div class="col-sm-5 custom-container jumbotron">
+<form class="form-horizontal" #signupform="ngForm">
+<fieldset>
+<legend>Sign Up</legend>
+
+<!-- Email block -->
+<div class="form-group">
+<label for="inputEmail">Email</label>
+<input [(ngModel)]="usr.Email" type="text" id="eml" placeholder="Enter Email" name="Email">
+</div>
+<div ngModelGroup="password">
+<!-- password block -->
+<div class="form-group">
+  <label for="inputPassword">Password</label>
+  <input [(ngModel)]="usr.pass" type="password" id="pwd" placeholder="Enter password" name="pass">
+</div>
+
+<!-- confirm passowd -->
+<div class="form-group">
+  <label for="confirmPassword">Confirm Password</label>
+  <input [(ngModel)]="usr.cpass" type="password" id="cpwd" placeholder="confirm password" name="cpass">
+</div>
+</div>
+
+<!-- select gender block -->
+<div class="form-group">
+  <label for="select">Select Gender</label>
+  <select id="gnd" [(ngModel)]="usr.gender" name="gender">
+    <option *ngFor="let g of gender">{{ g }}</option>
+    </select>
+
+  <!-- Terms and condition -->
+   <div class="form-group">
+     <label>
+       <input type="checkbox" [(ngModel)]="usr.tnc" name="tnc">Confirm that you've accepted terms and conditions
+     </label>
+   </div>
+
+   <!-- Button block -->
+   <div class="form-group">
+     <button type="reset" class="btn btn-default">Cancel</button>
+     <button type="submit" class="btn btn-primary" [disabled]="!signupform.form.valid">Submit</button>
+   </div>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
