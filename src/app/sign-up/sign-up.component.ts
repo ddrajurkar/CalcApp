@@ -16,9 +16,9 @@ export class SignUpComponent implements OnInit {
   ngOnInit() {
     this.gender = ['Male','Female','Other'];
     this.usr = new user({
-      Email:"",
-      pass:"",
-      cpass:"",
+      Email:"ddr@gmail.com",
+      pass:"1234",
+      cpass:"1234",
       gender:this.gender[0],
       tnc:false
     });
